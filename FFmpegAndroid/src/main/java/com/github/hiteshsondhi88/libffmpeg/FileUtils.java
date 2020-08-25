@@ -15,7 +15,7 @@ import java.util.Map;
 
 class FileUtils {
 
-    static final String ffmpegFileName = "libffmpeg.so";
+    static final String ffmpegFileName = "ffmpeg.so";
     private static final int DEFAULT_BUFFER_SIZE = 1024 * 4;
     private static final int EOF = -1;
 

@@ -12,10 +12,10 @@ android {
         versionName rootProject.ext.versionName as String
     }
 
-    sourceSets.main {
-        assets.srcDirs = ['assets']
-        jniLibs.srcDirs = ['libs']
-        jni.srcDirs = [] //disable automatic ndk-build
+    sourceSets {
+        main {
+            jni.srcDirs = ["libs"]
+        }
     }
 
     packagingOptions {
@@ -38,7 +38,6 @@ dependencies {
     annotationProcessor 'com.squareup.dagger:dagger-compiler:1.2.2'
     implementation 'com.squareup.dagger:dagger:1.2.2'
     implementation 'com.jakewharton:butterknife:10.2.3'
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
     androidTestImplementation 'com.squareup.assertj:assertj-android:1.0.0'
     implementation project(':FFmpegAndroid')
 }

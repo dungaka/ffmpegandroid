@@ -16,10 +16,10 @@ android {
         versionName rootProject.ext.versionName as String
     }
 
-    sourceSets.main {
-        assets.srcDirs = ['assets']
-        jni.srcDirs = [] //disable automatic ndk-build
-        jniLibs.srcDirs = ['libs']
+    sourceSets {
+        main {
+            jni.srcDirs = ["libs"]
+        }
     }
 
     buildTypes {
@@ -31,8 +31,6 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-
     androidTestImplementation 'com.squareup.assertj:assertj-android:1.0.0'
 }
 
